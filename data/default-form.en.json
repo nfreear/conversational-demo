@@ -1,0 +1,44 @@
+{
+  "#": [
+    " lang = 'en-GB' (English) ",
+    " Basic / formless example | © Nick Freear, 17-Jan-2020. ",
+    "https://space10-community.github.io/conversational-form/docs/1.0.0/functionality/formless/"
+  ],
+
+  "options": {
+    "formEl": null,
+    "suppressLog": false,
+    "showProgressBar": true,
+    "theme": "dark"
+  },
+
+  "tags": [
+    {
+      "tag": "cf-robot-message",
+      "cf-questions": "Greetings ...! 👋"
+    }, {
+      "tag": "cf-robot-message",
+      "cf-questions": "I'm a 'conversational-form' ..."
+    }, {
+      "tag": "cf-robot-message",
+      "cf-questions": "I've got some questions for you. Let's begin"
+    }, {
+      "tag": "input",
+      "type": "text",
+      "name": "Name",
+      "required": "required",
+      "cf-questions": "What is your name?"
+    }, {
+      "tag": "input",
+      "type": "email",
+      "name": "Email",
+      "required": "required",
+      "cf-questions": "What is your email address?"
+    },
+
+    {
+      "tag": "cf-robot-message",
+      "cf-questions": "Thank you! ❤️"
+    }
+  ]
+}
