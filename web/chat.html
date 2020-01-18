@@ -1,48 +1,24 @@
 <!doctype html> <title> Conversational-form — basic </title>
 
-<style>
-  form { font: 1.1rem sans-serif; margin: 0 auto; max-width: 36rem; padding: 1rem; }
-  button, input, textarea, select { border: 1px solid #aaa; font-size: 1.1rem; min-width: 16rem; padding: .5rem; }
-
-  .conversational-form { border-radius: .5rem; min-height: 400px; }
-</style>
+<link rel="stylesheet" href="./style.css" />
 
 
-<script>
-window.CF_LAUNCH_OPTIONS = {
-  jsonFiles: {
-    default: '/data/default-form.en.json',
-    french : '/data/basic-form.fr.json',
-  }
-};
-</script>
+<form id="cf-form-0" data-X-cf-form>
 
+  <div class="cfl-loading">
 
-<form id="cf-form-0" data-X-cf-form class="xxx">
+    <h1> Conversational-form &mdash; loading ... </h1>
 
-  <h1> Conversational-form &mdash; basic 02 </h1>
+    <p> Requires Javascript and a modern browser </p>
 
-  <h2> Loading ... </h2>
-
-  <cf-robot-message cf-questions="Greetings ... (X)" />
+  </div>
 
 </form>
 
 
-<!-- ConversationalForm -->
 <script src="https://unpkg.com/conversational-form@1.0.2/dist/conversational-form.js" crossorigin ></script>
-<!-- End of ConversationalForm -->
-
 
 <script type="module" src="/src/cf-launcher-formless.js"></script>
 
 
-<pre>
-
-Nick Freear / 17-Jan-2020.
-
- * https://gist.github.com/nfreear/02367f85ae33d41fd1c4f3f59ef1f7d9
- * https://space10-community.github.io/conversational-form/
- * https://github.com/space10-community/conversational-form
-
-</pre>
+<pre>  https://gist.github.com/nfreear/02367f85ae33d41fd1c4f3f59ef1f7d9 </pre>

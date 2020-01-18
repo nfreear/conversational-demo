@@ -1,9 +1,10 @@
 {
   "private": true,
   "name": "@nfreear/conversational-form-demo",
-  "description": "Experiments & demos with Space10's 'conversational-form' Javascript.",
+  "description": "Experiments & demos with Space10's `conversational-form` Javascript.",
   "license": "MIT",
   "repository": "https://github.com/nfreear/conversational-demo.git",
+  "homepage": "https://space10-community.github.io/conversational-form/",
   "scripts": {
     "start": "live-server --port=9001 --no-browser"
   },

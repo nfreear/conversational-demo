@@ -1,0 +1,33 @@
+
+form {
+  color: #222;
+  font: 1.1rem sans-serif;
+  margin: 0 auto;
+  max-width: 36rem;
+  padding: 1rem;
+}
+
+button,
+input,
+textarea,
+select {
+  border: 1px solid #aaa;
+  font-size: 1.1rem;
+  min-width: 16rem;
+  padding: .5rem;
+}
+
+.cfl-loading {
+  text-align: center;
+}
+
+.cfl-loading h1 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.conversational-form {
+  border-radius: .5rem;
+  min-height: 450px;
+}
