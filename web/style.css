@@ -31,3 +31,41 @@ select {
   border-radius: .5rem;
   min-height: 450px;
 }
+
+/**
+ CSS accessibility fixes :~
+ Visually indicate keyboard focus, ensure sufficient contrast, etc.
+
+ @see https://css-tricks.com/snippets/css/glowing-blue-input-highlights/
+*/
+
+.X-conversational-form input:focus,
+.X-conversational-form .cf-input-button:focus {
+  outline: 1px solid yellow !important;
+  outline-offset: 2px;
+  transition: all 1s;
+}
+
+[ role = button ],
+input[ type = text ],
+textarea {
+  /* -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out; */
+  transition: all 0.5s ease-in-out;
+  outline: none;
+  border: 1px solid #aaa;
+  /* padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD; */
+}
+
+[ role = button ]:focus,
+input[ type = text ]:focus,
+textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  /* padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px; */
+  border: 1px solid rgba(81, 203, 238, 1);
+}
