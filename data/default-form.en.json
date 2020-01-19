@@ -27,6 +27,7 @@
       "type": "text",
       "name": "Name",
       "required": "required",
+      "minlength": "2",
       "cf-questions": "What is your name?"
     }, {
       "tag": "input",

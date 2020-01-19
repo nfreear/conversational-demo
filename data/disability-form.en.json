@@ -1,0 +1,77 @@
+{
+  "#": [
+    " lang = 'en-GB' (English) ",
+    " Disability quiz / formless example | © Nick Freear, 19-Jan-2020. ",
+    "https://space10-community.github.io/conversational-form/docs/1.0.0/functionality/formless/"
+  ],
+
+  "tags": [
+    {
+      "tag": "cf-robot-message",
+      "cf-questions": "Welcome to a disability quiz ...! 👋"
+    }, {
+      "tag": "cf-robot-message",
+      "cf-questions": "I've got some questions for you. Let's begin"
+    }, {
+      "tag": "textarea",
+      "name": "disability_desc",
+      "required": "required",
+      "minlength": "2",
+      "maxlength": "20",
+      "cf-questions": "What is name of your disability, health condition, mental health difficulty or specific learning difficulty?"
+    }, {
+      "tag": "select",
+      "name": "disability_cat",
+			"cf-input-placeholder": "Choose one or more of the above..",
+			"multiple": "multiple",
+			"cf-questions": "Please select one or more options",
+			"children": [
+        {
+					"tag": "option",
+          "name": "disability_cat",
+          "value": "Sight",
+					"cf-label": "Sight",
+          "title": "You are blind or partially sighted.",
+					"cf-validation": null
+				}, {
+					"tag": "option",
+          "name": "disability_cat",
+          "value": "Hearing",
+          "cf-label": "Hearing",
+          "title": "You are Deaf or hard of hearing."
+				}, {
+					"tag": "option",
+          "name": "disability_cat",
+          "value": "SPLD",
+          "cf-label": "Specific learning difficulty",
+          "title": "You have a specific learning difficulty (such as dyslexia or dyspraxia)."
+				}
+      ]
+    }, {
+      "cf-conditional-disability_cat": "SPLD",
+      "tag": "select",
+      "name": "spld_diagnosis",
+      "cf-questions": "Have you had a formal diagnosis of a specific learning difficulty, for example, dyslexia, dyspraxia, ADHD or dyscalculia ?",
+      "children": [ {
+					"tag": "option",
+          "name": "spld_diagnosis",
+					"value": "Yes",
+          "cf-label": "Yes"
+				}, {
+  					"tag": "option",
+            "name": "spld_diagnosis",
+  					"value": "No",
+            "cf-label": "No"
+  				}
+      ]
+    },
+
+    {
+      "tag": "cf-robot-message",
+      "cf-questions": "... To be continued ..."
+    }, {
+      "tag": "cf-robot-message",
+      "cf-questions": "Thank you! ❤️"
+    }
+  ]
+}

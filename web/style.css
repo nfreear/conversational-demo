@@ -17,18 +17,23 @@ select {
   padding: .5rem;
 }
 
-.cfl-loading {
+.cfl-loading-text {
   text-align: center;
 }
 
-.cfl-loading h1 {
+.cfl-loading-text h1 {
   font-size: 1.6rem;
   font-weight: normal;
   text-align: center;
 }
 
-.conversational-form {
+.cfl-is-loaded .cfl-loading-text {
+  display: none;
+}
+
+body .conversational-form {
   border-radius: .5rem;
+  bottom: auto;
   min-height: 450px;
 }
 

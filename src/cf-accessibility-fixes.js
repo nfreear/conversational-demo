@@ -3,8 +3,8 @@
  *
  * @TODO These fixes are incomplete! You need to arrange accessibility testing.
  *
- * @license MIT
- * @author © Nick Freear <https://nick.freear.org.uk>
+ * @license  MIT
+ * @author   © Nick Freear <https://nick.freear.org.uk>
  *
  * @see https://w3.org/TR/wai-aria-1.1/
  * @see https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
@@ -13,11 +13,11 @@
 // Configuration - use a crude timeout!
 const TIMEOUT_MS = 5000;
 const APPLY_SELECTOR = 'script[ src *= accessibility-fixes ][ src *= apply ]';
-const setTimeout = window.setTimeout;
 const DOC = window.document;
+const setTimeout = window.setTimeout;
 
 // ------------------------------------------------------------
-// An array of fixes, with CSS selectors.
+// JSON array of fixes, with CSS selectors.
 
 export const ACCESSIBILITY_FIXES = [ {
     // Set a 'landmark' role and label on the HTML wrapper.
@@ -42,7 +42,7 @@ export const ACCESSIBILITY_FIXES = [ {
       "aria-label": "Type your answer here ...",
       "tabindex": 0, // Prefer '0'
     }
-  }, {
+  }, /* {
     // Ensure the 'button' is focussable with a keyboard.
     "selector": ".conversational-form .cf-input-button",
     "attributes": {
@@ -50,7 +50,7 @@ export const ACCESSIBILITY_FIXES = [ {
       "role": "button",
       "tabindex": 0, // Prefer '0'
     }
-  },
+  }, */
 ];
 
 export function applyFixes(timeoutMs) {

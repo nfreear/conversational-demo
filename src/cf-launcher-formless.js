@@ -20,16 +20,45 @@ if (formId in CFL_CONFIG.jsonUrls) {
   formJsonUrl = CFL_CONFIG.jsonUrls[ CFL_CONFIG.defaultId ];
 }
 
+const cfDispatcher = new cf.EventDispatcher();
+
 fetch(formJsonUrl).then(resp => resp.json()).then(cfFormData => {
+  cfFormData.options = CFL_CONFIG.cfOptions;
+  cfFormData.options.submitCallback = submitCallback;
+  cfFormData.options.eventDispatcher= cfDispatcher;
+
   console.warn('CF form data:', cfFormData)
 
   const cfInstance = cf.ConversationalForm.startTheConversation(cfFormData);
 });
 
-/* const response = await fetch(jsonUrl);
-const cfFormData = response.json();
+let updateCount = 0;
 
-const cfInstance = cf.ConversationalForm.startTheConversation(cfFormData);
-*/
+cfDispatcher.addEventListener(cf.FlowEvents.FLOW_UPDATE, EV => {
+  if (updateCount == 0) {
+    console.warn('CF is loaded!');
+
+    document.body.className += ' cfl-is-loaded';
+  }
+
+  console.debug(`> Flow update ${ updateCount }:`, EV);
+  updateCount++;
+});
+
+function submitCallback(cfResult) {
+  console.debug('submitCallback:', cfResult);
+
+  const FORM_ELEMS = [...cfResult.formEl.elements];
+
+  const FORM_VALUES = FORM_ELEMS.map(elem => {
+    if (/select-multiple/.test(elem.type)) {
+      return { f: elem.name, v: [...elem.selectedOptions].map(opt => opt.value) };
+    } else {
+      return { f: elem.name, v: elem.value || null };
+    }
+   });
+
+  console.warn('Form values:', FORM_VALUES);
+}
 
 // End.

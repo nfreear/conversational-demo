@@ -5,13 +5,6 @@
     "https://space10-community.github.io/conversational-form/docs/1.0.0/functionality/formless/"
   ],
 
-  "options": {
-    "formEl": null,
-    "suppressLog": false,
-    "showProgressBar": true,
-    "theme": "dark"
-  },
-
   "tags": [
     {
       "tag": "cf-robot-message",
