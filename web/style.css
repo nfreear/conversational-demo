@@ -33,6 +33,7 @@ select {
 
 body .conversational-form {
   border-radius: .5rem;
+  border: 1px solid #aaa;
   bottom: auto;
   min-height: 450px;
 }

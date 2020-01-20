@@ -5,7 +5,15 @@
 export const CFL_CONFIG = {
   formSelector: 'cf-form-0',
   // loaderSelector: 'cfl-loading',
-  defaultId: 'default',
+  formId: {
+    regex: 'id=(default|french|disability)',
+    default: 'default'
+  },
+  theme: {
+    regex: 'theme=(light|dark|red|green|blue|purple)',
+    default: 'dark'
+  },
+
   jsonUrls: {
     default: '/data/default-form.en.json',
     french : '/data/basic-form.fr.json',

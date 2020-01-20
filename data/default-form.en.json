@@ -18,7 +18,7 @@
       "cf-questions": "Greetings ...! 👋"
     }, {
       "tag": "cf-robot-message",
-      "cf-questions": "I'm a 'conversational-form' ..."
+      "cf-questions": "I'm a <q>conversational-form</q> &hellip;"
     }, {
       "tag": "cf-robot-message",
       "cf-questions": "I've got some questions for you. Let's begin"
@@ -34,7 +34,8 @@
       "type": "email",
       "name": "Email",
       "required": "required",
-      "cf-questions": "What is your email address?"
+      "cf-questions": "What is your email address?",
+      "cf-error": "Expecting a valid email address"
     },
 
     {
