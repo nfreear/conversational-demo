@@ -1,0 +1,30 @@
+{
+  "#": [ " Security tests | Nick Freear, 20-Jan-2020. " ],
+
+  "tags": [
+    {
+      "tag": "cf-robot-message",
+      "cf-questions": "<h1> Security tests </h1>"
+    }, {
+      "tag": "cf-robot-message",
+      "cf-questions": "1. Javascript .. <script> console.error('Injected 1'); alert('Injected 1') </script> (Not stripped!)"
+    }, {
+      "tag": "cf-robot-message",
+      "cf-questions": "2. A Javascript url .. <a href='javascript:alert(\"Injected 2\")'>[ Run ]</a> (Works!)"
+    }, {
+      "tag": "cf-robot-message",
+      "cf-questions": "3. A Javascript button .. <button onclick='javascript:alert(\"Injected 3\")'>Run</button> (Works!)"
+    }, {
+      "tag": "cf-robot-message",
+      "cf-questions": "4. CSS style .. <style>body { border:3px solid red; } </style> (Works!)"
+    }, {
+      "tag": "input",
+      "type": "text",
+      "name": "Name",
+      "cf-questions": "What is your name?"
+    }, {
+      "tag": "cf-robot-message",
+      "cf-questions": ">> End of Security tests."
+    }
+  ]
+}

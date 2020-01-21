@@ -6,7 +6,7 @@ export const CFL_CONFIG = {
   formSelector: 'cf-form-0',
   // loaderSelector: 'cfl-loading',
   formId: {
-    regex: 'id=(default|french|disability)',
+    regex: 'id=(default|french|disability|security)',
     default: 'default'
   },
   theme: {
@@ -18,6 +18,7 @@ export const CFL_CONFIG = {
     default: '/data/default-form.en.json',
     french : '/data/basic-form.fr.json',
     disability: '/data/disability-form.en.json',
+    security  : '/data/security-test.en.json',
   },
 
   cfOptions: {

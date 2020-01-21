@@ -38,6 +38,11 @@ body .conversational-form {
   min-height: 450px;
 }
 
+.conversational-form h1,
+.conversational-form button {
+  color: #999;
+}
+
 /**
  CSS accessibility fixes :~
  Visually indicate keyboard focus, ensure sufficient contrast, etc.
